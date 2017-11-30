@@ -75,7 +75,7 @@ const icons = [{
   imgUrl: 'https://github.com/dougecox',
   name: 'GitHub' }, {
   img: 'img3',
-  imgUrl: 'https://appanda.co',
+  imgUrl: 'http://appanda.co',
   name: 'appanda' }]
 
 
