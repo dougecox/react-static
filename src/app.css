@@ -24,6 +24,8 @@ nav {
   background: #1fc4a0;
 }
 
+
+
 nav a {
   color: white;
   padding: 1rem;
@@ -51,6 +53,10 @@ a.icons:hover {
 }
 .cards:hover {
   background-color: black;
+}
+
+a.navLink:hover{
+  background: grey;
 }
 .footer {
   color: 'black';

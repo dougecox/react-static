@@ -10,9 +10,9 @@ export default () => (
     <div>
       <nav>
         <span style={{ padding: '1em', margin: '2em' }}> Douglas Eldon Cox </span>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
+        <Link className="navLink" to="/">Home</Link>
+        <Link className="navLink" to="/about">About</Link>
+        <Link className="navLink" to="/blog">Blog</Link>
       </nav>
       <div className="content" style={{ margin: '0', padding: '0' }}>
         <Routes />

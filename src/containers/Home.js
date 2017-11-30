@@ -86,7 +86,8 @@ class Projects extends React.Component {
       title: this.props.title,
       link: this.props.link,
       description: this.props.description,
-      image: this.props.image }
+      image: this.props.image,
+      style: this.props.style }
   }
   render () {
     return (
@@ -97,15 +98,14 @@ class Projects extends React.Component {
           margin: '2%',
           padding: 'auto',
           color: 'black',
-          float: 'left',
-          width: '27%',
           borderRadius: '8px' }}
       >
         <a href={this.state.link} target="_blank" rel="nofollow">
           <span
             className="title"
             style={{
-              color: 'grey' }}
+              color: 'white',
+              padding: '1em' }}
           >
             {this.state.title}
           </span>
@@ -121,9 +121,6 @@ class Projects extends React.Component {
           Description: {this.state.title}<br />
             {this.state.description}
           </div>
-          <button className="square" onClick={() => alert(this.props.title)}>
-            {this.props.value}
-          </button>
         </a>
       </div>
     )
@@ -138,19 +135,16 @@ export default getSiteProps(() => (
         padding: '0.5em',
         animationName: 'fadeInleft',
         color: 'grey',
+        display: 'flex',
         background: 'url("https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?auto=format&fit=crop&w=967&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D")' }}
       >
     Full Stack <br /> Developer</h1>
     </div>
 
-    <div className="pageTwo" style={{ background: 'grey', margin: '0', padding: '0' }}>
-      <span style={{
-        color: '#1fc4a0',
-        textAlign: 'justify',
-        textShadow: '3px 2px black' }}
-      >
+    <div className="pageTwo" style={{ background: 'grey', margin: '0', padding: '3%', width: 'auto', display: 'flex' }}>
         Projects:
-      </span> <hr /><br />
+      <br /><hr /><br />
+
       {hrprojects.map(project => (
         <Projects
           key={project.title}
@@ -160,35 +154,40 @@ export default getSiteProps(() => (
           description={project.description}
           style={{
             margin: '30%',
-            padding: '20%' }}
+            padding: '20%',
+            color: 'white',
+            backgroundColor: '#1fc4a0' }}
         />
       ))}
-      <span style={{
-        color: '#1fc4a0',
-        textAlign: 'justify',
-        textShadow: '3px 2px black' }}
-      >
-      c:
-      </span> <hr /><br />
+
+    </div>
+    <div
+      className="sectionThree"
+      style={{
+        background: 'grey',
+        width: 'auto',
+        padding: '7px',
+      }}>
+      <hr />
+       ' More Goodies '
+      <hr /><br />
       {projects.map(project => (
-        <Projects
-          key={project.title}
-          title={project.title}
-          img={project.image}
-          link={project.link}
-          description={project.description}
-          style={{
-            margin: '30%',
-            padding: '20%' }}
-        />
+        <a href={project.link} style={{color: 'black'}}>
+          <span className="topic" > 
+            eg:  
+          </span> {project.title} <br />
+          <span className="description" style={{backgroundColor: '#1fc4a0', color: 'darkslategrey', border: '1px solid black'  }}>
+          description: {project.description}</span>
+          <br />
+        </a>
       ))}
     </div>
-
+    <br /><br /><br />
     <div
       className="footer"
       style={{
         clear: 'left',
-        backgroundColor: 'grey',
+        backgroundColor: 'white',
         margin: 'auto',
         display: 'flex',
         padding: '2%',
