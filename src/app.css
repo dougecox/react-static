@@ -61,3 +61,31 @@ a.navLink:hover{
 .footer {
   color: 'black';
 }
+
+.scroll - indicator {
+  display: block;position: absolute;left: 50 % ;margin - top: -18 px;margin - left: -45 px;top: 50 % ;width: 90 px
+}.scroll - indicator.off {
+  opacity: 0;transition: 1 s all; - moz - animation - play - state: paused; - webkit - animation - play - state: paused; - ms - animation - play - state: paused;animation - play - state: paused
+}.scroll - indicator a {
+  display: block;height: auto;width: 100 % ;text - align: center;color: black
+}.scroll - indicator span {
+  font - size: .8e m;
+  letter - spacing: .26e m;
+  text - align: center;
+  display: block;
+  opacity: 1;
+  height: auto;
+  width: 100 % ;
+  position: absolute;
+  bottom: -20 px;
+  padding - left: .26e m
+}.scrolldown - btn {
+  width: 100 % ;height: auto;text - align: center;padding - bottom: 14 px
+}.scrolldown - btn::before {
+  content: '\00a0';border - style: solid;border - width: 3 px 2.5 px 0 2.5 px;border - color: black transparent transparent transparent;display: block;position: absolute;top: 0;left: 50 % ;width: 0;height: 0;margin - left: -1.5 px; - webkit - transform: scale(5); - moz - transform: scale(5); - ms - transform: scale(5);transform - origin: scale(5);animation: arrow 11 s ease - in -out infinite;animation - delay: 1 s
+}.scrolldown - btn::after {
+  content: "\00a0";background: black;border - radius: 50 % ;border: 1 px solid# fff;display: block;position: absolute;z - index: 1;left: 50 % ;top: 0;margin - left: -0 px;margin - top: -0 px;opacity: 0;width: 0 px;height: 0 px;animation: scrollit 11 s ease - in -out infinite;animation - delay: 1 s
+}
+a.scroll - down::before {
+  content: "\00a0";background: transparent;border: .01 px solid black;border - radius: 50 % ;display: block;position: absolute;z - index: 1;left: 50 % ;top: 0;margin - left: -0 px;margin - top: -0 px;width: 0 px;height: 0 px;opacity: 0;animation: scrollit3 11 s ease - in -out infinite;animation - delay: 1 s
+}
