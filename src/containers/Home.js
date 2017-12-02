@@ -77,6 +77,7 @@ const projects = [
   },
 ]
 const icons = [{
+
   img: 'img1',
   imgUrl: 'https://linkedin.com/in/dougecox',
   name: 'LinkedIn' }, {
@@ -87,6 +88,14 @@ const icons = [{
   imgUrl: 'http://appanda.co',
   name: 'appanda' }]
 
+function toggle_visibility(id) {
+  const e = document.getElementsByClassName(id)[0]
+  if (e.style.display == 'block') {
+    e.style.display = 'none'
+  } else {
+    e.style.display = 'block'
+  }
+}
 
 class Projects extends React.Component {
   constructor (props) {
@@ -178,11 +187,11 @@ export default getSiteProps(() => (
         padding: '7px' }}
     >
       <hr />
-      <span className="category">
+      <span className="category" onClick={ () => toggle_visibility('client') }>
         ClientSide Javascript
       </span>
       <hr />
-      <span className="data" style={{ }}>
+      <div className="client" style={{ display: 'none' }}>
         {projects
           .filter(project => project.category === 'client')
           .map(project => (
@@ -193,7 +202,7 @@ export default getSiteProps(() => (
               <br />
             </a>
           ))}
-      </span>
+      </div>
     </div>
     <div
       className="sectionThree"
@@ -204,11 +213,11 @@ export default getSiteProps(() => (
         clear: 'left' }}
     >
       <hr />
-      <span className="category">
+      <span className="category" onClick={ () => toggle_visibility('server') }>
         Serverside Javascript
       </span>
       <hr />
-      <span className="data" style={{ }}>
+      <span className="server" style={{ display: 'none'  }}>
         {projects
           .filter(project => project.category === 'server')
           .map(project => (
@@ -230,12 +239,12 @@ export default getSiteProps(() => (
         padding: '7px',
         clear: 'left' }}
     >
-      <span className="category">
+      <hr />
+      <span className="category" onClick={ () => toggle_visibility('data') }>
         Database and Wireframes
       </span>
       <hr />
-      <hr />
-      <span className="data" style={{ }}>
+      <span className="data" style={{ display: 'none'  }}>
         {projects
           .filter(project => project.category === 'other' || project.category === 'database')
           .map(project => (

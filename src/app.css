@@ -100,3 +100,7 @@ a.navLink:hover{
     width: 100%;
   }
 }
+
+.sectionThree:hover {
+  color: white;
+}

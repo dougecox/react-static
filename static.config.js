@@ -17,10 +17,10 @@ export default {
         component: 'src/containers/About',
       },
       {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getProps: () => ({
-          posts,
+       // path: '/blog',
+       // component: 'src/containers/Blog',
+       // getProps: () => ({
+       //   posts,
         }),
         children: posts.map(post => ({
           path: `/post/${post.id}`,
