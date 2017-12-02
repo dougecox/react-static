@@ -186,8 +186,8 @@ export default getSiteProps(() => (
         {projects
           .filter(project => project.category === 'client')
           .map(project => (
-            <a href={project.link} style={{color: 'black', lineHeight: '1', float: 'left', position: 'relative', left: '30px', padding: '1%' }}>
-              {project.title}: <tab />
+            <a href={project.link} key={project.title} style={{ color: 'black', lineHeight: '1', float: 'left', position: 'relative', left: '30px', padding: '1%' }}>
+              {project.title}: &nbsp;
               <span className="description" style={{ color: '#1fc4a0'}}>
               description: {project.description}</span>
               <br />
@@ -212,8 +212,8 @@ export default getSiteProps(() => (
         {projects
           .filter(project => project.category === 'server')
           .map(project => (
-            <a href={project.link} style={{color: 'black', lineHeight: '1', float: 'left', position: 'relative', left: '30px', padding: '1%' }}>
-              {project.title}: <tab />
+            <a href={project.link} key={project.title} style={{ color: 'black', lineHeight: '1', float: 'left', position: 'relative', left: '30px', padding: '1%' }}>
+              {project.title}: &nbsp;
               <span className="description" style={{ color: '#1fc4a0'}}>
               description: {project.description}</span>
               <br />
@@ -239,8 +239,8 @@ export default getSiteProps(() => (
         {projects
           .filter(project => project.category === 'other' || project.category === 'database')
           .map(project => (
-            <a href={project.link} style={{color: 'black', lineHeight: '1', float: 'left', position: 'relative', left: '30px', padding: '1%' }}>
-              {project.title}: <tab />
+            <a href={project.link} key={project.title} style={{ color: 'black', lineHeight: '1', float: 'left', position: 'relative', left: '30px', padding: '1%' }}>
+              {project.title}: &nbsp;
               <span className="description" style={{ color: '#1fc4a0' }}>
               description: {project.description}</span>
               <br />
