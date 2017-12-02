@@ -88,14 +88,7 @@ const icons = [{
   imgUrl: 'http://appanda.co',
   name: 'appanda' }]
 
-function toggle_visibility(id) {
-  const e = document.getElementsByClassName(id)[0]
-  if (e.style.display == 'block') {
-    e.style.display = 'none'
-  } else {
-    e.style.display = 'block'
-  }
-}
+
 
 class Projects extends React.Component {
   constructor (props) {
@@ -187,7 +180,18 @@ export default getSiteProps(() => (
         padding: '7px' }}
     >
       <hr />
-      <span className="category" onClick={ () => toggle_visibility('client') }>
+
+      <span 
+      className="category" 
+      onClick={ () => {
+          const e = document.getElementsByClassName('client')[0]
+          if (e.style.display == 'block') {
+            e.style.display = 'none'
+          } else {
+            e.style.display = 'block'
+          }
+        }
+      }>
         ClientSide Javascript
       </span>
       <hr />
@@ -213,7 +217,18 @@ export default getSiteProps(() => (
         clear: 'left' }}
     >
       <hr />
-      <span className="category" onClick={ () => toggle_visibility('server') }>
+      
+      <span 
+      className="category" 
+      onClick={ () => {
+          const e = document.getElementsByClassName('server')[0]
+          if (e.style.display == 'block') {
+            e.style.display = 'none'
+          } else {
+            e.style.display = 'block'
+          }
+        }
+      }>
         Serverside Javascript
       </span>
       <hr />
@@ -240,7 +255,17 @@ export default getSiteProps(() => (
         clear: 'left' }}
     >
       <hr />
-      <span className="category" onClick={ () => toggle_visibility('data') }>
+      <span 
+      className="category" 
+      onClick={ () => {
+          const e = document.getElementsByClassName('data')[0]
+          if (e.style.display == 'block') {
+            e.style.display = 'none'
+          } else {
+            e.style.display = 'block'
+          }
+        }
+      }>
         Database and Wireframes
       </span>
       <hr />
