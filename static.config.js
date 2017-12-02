@@ -17,18 +17,18 @@ export default {
         component: 'src/containers/About',
       },
       {
-       // path: '/blog',
-       // component: 'src/containers/Blog',
-       // getProps: () => ({
-       //   posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getProps: () => ({
-            post,
-          }),
-        })),
+        // path: '/blog',
+        // component: 'src/containers/Blog',
+        // getProps: () => ({
+        //   posts,
+        // }),
+        // children: posts.map(post => ({
+        //   path: `/post/${post.id}`,
+        //   component: 'src/containers/Post',
+        //   getProps: () => ({
+        //     post,
+        //   }),
+        // })),
       },
       {
         is404: true,
