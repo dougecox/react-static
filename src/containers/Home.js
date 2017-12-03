@@ -146,8 +146,13 @@ export default getSiteProps(() => (
         padding: '0.5em',
         animationName: 'fadeInleft',
         color: 'grey',
-        display: 'flex',
-        background: 'url("https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?auto=format&fit=crop&w=967&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D")' }}
+        display: 'flex', //
+        height: '300px', 
+        backgroundImage: 'url("https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?auto=format&fit=crop&w=967&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D")',
+        backgroundAttachment: 'fixed',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover' }}
       ><span className="fullStack">
       Full Stack <br /> Developer </span>
       </h1>
@@ -195,7 +200,7 @@ export default getSiteProps(() => (
         ClientSide Javascript
       </span>
       <hr />
-      <div className="client" style={{ display: 'none' }}>
+      <div className="client" style={{ display: 'block' }}>
         {projects
           .filter(project => project.category === 'client')
           .map(project => (
@@ -232,7 +237,7 @@ export default getSiteProps(() => (
         Serverside Javascript
       </span>
       <hr />
-      <span className="server" style={{ display: 'none'  }}>
+      <span className="server" style={{ display: 'block'  }}>
         {projects
           .filter(project => project.category === 'server')
           .map(project => (
@@ -269,7 +274,7 @@ export default getSiteProps(() => (
         Database and Wireframes
       </span>
       <hr />
-      <span className="data" style={{ display: 'none'  }}>
+      <span className="data" style={{ display: 'block'  }}>
         {projects
           .filter(project => project.category === 'other' || project.category === 'database')
           .map(project => (
