@@ -147,11 +147,10 @@ export default getSiteProps(() => (
         animationName: 'fadeInleft',
         color: 'grey',
         display: 'flex', //
-        height: '300px', 
+        height: 'auto', 
         backgroundImage: 'url("https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?auto=format&fit=crop&w=967&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D")',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover' }}
       ><span className="fullStack">
       Full Stack <br /> Developer </span>

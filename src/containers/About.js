@@ -1,7 +1,7 @@
 
 import React from 'react'
 //
-import meImg from './profile.png'
+import meImg from '../static-site/site/profile.png'
 
 export default () => (
   <div>
